@@ -1,9 +1,9 @@
 #include "main.h"
  /**
-  * _memset -  assign a particular value to a memory block
+  * _memset - block of  memory with a particular value
   * @s: initial memory address to be inputed
-  * @b:the preferred value
-  * @n: number of bytes that must be altered
+  * @b: the preferred value
+  * @n: the number of bytes that must be altered
   *
   * Return: modified array with updated n byte value
   */
