@@ -35,7 +35,7 @@ int count_word(char *s)
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
-	int l, h = 0 len = 0, words, a = 0, start, end;
+	int l, h = 0, len = 0, words, a = 0, start, end;
 
 	while (*(str + len))
 		len++;
@@ -61,7 +61,7 @@ char **strtow(char *str)
 				while (start < end)
 				*tmp++ = str[start++];
 				*tmp = '\0';
-				matrix[k] = tmp - a;
+				matrix[h] = tmp - a;
 				h++;
 				a = 0;
 			}
