@@ -83,43 +83,43 @@ int main(int argc, char *argv[])
 
 	for (l = 0; l <= len1 + len2; l++)
 		result[l] = 0;
-
+	
 	for (len1 = len1 - 1; len1 >= 0; len1--)
+
 	{
 		digit1 = s1[len1] - '0';
 		carry = 0;
 
 		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
+
 		{
 			digit2 = s2[len2] - '0';
-			carry = 0;
 
-			for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
-			{
-				digit2 = s2[len2] - '0';
-				carry += result[len1 + len2 + 1] + (digit1 * digit2);
-				result[len1 + len2 + 1] = carry % 10;
-				carry /= 10;
-			}
-			if (carry > 0)
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
 
-				result[len1 + len2 + 1] += carry;
+			result[len1 + len2 + 1] = carry % 10;
+
+			carry /= 10;
 		}
-		for (l = 0; l < len - 1; l++)
-		{
-			if (result[l])
-				a = 1;
-			if (a)
-				_putchar(result[l] + '0');
-		}
+		
+		if (carry > 0)
 
-		if (!a)
-			_putchar('0');
-
-		_putchar('\n');
-
-		free(result);
-
-		return (0);
+			result[len1 + len2 + 1] += carry;
 	}
+
+	for (l = 0; l < len - 1; l++)
+	{
+		if (result[l])
+			a = 1;
+		if (a)
+			_putchar(result[l] + '0');
+	}
+
+	if (!a)
+		_putchar('0');
+
+	_putchar('\n');
+	free(result);
+	
+	return (0);
 }
