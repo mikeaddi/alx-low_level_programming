@@ -3,7 +3,7 @@
 
 /**
  * free_dog - a function that frees dogs.
- * d: struct dog to free
+ * @d: struct dog to free
  */
 void free_dog(dog_t *d)
 {
