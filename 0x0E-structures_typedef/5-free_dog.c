@@ -3,14 +3,14 @@
 
 /**
  * free_dog - a function that frees dogs.
- * @b: struct dog to free
+ * d: struct dog to free
  */
-void free_dog(dog_t *b)
+void free_dog(dog_t *d)
 {
-	if(b)
+	if (d)
 	{
-		free(b->name);
-		free(b->owner);
-		free(b);
+		free(d->name);
+		free(d->owner);
+		free(d);
 	}
 }
