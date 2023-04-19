@@ -10,6 +10,7 @@
 int main(void)
 {
 	int s;
+	int SIZE;
 
 	s = 98 + SIZE;
 	printf("%d\n", s);
